@@ -1,11 +1,11 @@
-<!-- # vim: syn=css -->
-<!--
-  TeamSpeak 3 QT Stylesheet
+/* # vim: syn=css */
+/**
+  TeamSpeak 3 QT Chat Stylesheet
   Created for DarkenTS
   Licensed under CC BY-NC-SA 4.0 - https://creativecommons.org/licenses/by-nc-sa/4.0/
   By @Brady_The, modified by @Bluscream
   Last updated: 11/21/2016
--->
+**/
 
 /* @group Global Elements */
 
@@ -45,13 +45,13 @@ a:visited {
 
 /* @group Object Link Elements */
 
-.TextMessage_UserLink {					/* User Name */
+.TextMessage_UserLink { /* User Name */
 	color: rgb(23,151,81);
 		font-weight: bold;
 		text-decoration: none;
 }
 
-.TextMessage_OfflineLink,				/* Channel Name */
+.TextMessage_OfflineLink, /* Channel Name */
 .TextMessage_ChannelLink {
 	color: rgb(230,126,34);
 		font-weight: bold;
@@ -62,8 +62,8 @@ a:visited {
 
 /* @group Colored Message Elements */
 
-.TextMessage_HostName,					/* Server Address */
-.TextMessage_ServerLink	{				/* Server Name */
+.TextMessage_HostName, /* Server Address */
+.TextMessage_ServerLink	{ /* Server Name */
 	color: rgb(249,101,93);
 		font-weight: bold;
 }
