@@ -1,0 +1,1158 @@
+/*
+ * @Brady_The
+ * DarkenTS and its sub projects (including theme variations and icon packs) are licensed under CC BY-NC-SA 4.0 - https://creativecommons.org/licenses/by-nc-sa/4.0/
+ * Changelog:
+ * 13.01.2016 Alpha 0.1.0
+ * 23.01.2016 Release 1.0.0
+ * 25.01.2016 Version 1.0.1
+	± Adjusted style of QMenu::item:disabled:selected - Thank you, numma_cway.
+	± Fixed several borders - Thank you, numma_cway.
+	± Fixed Sub-menu background - Thank you, numma_cway.
+	± Changed font-weight of Keyboard shortcuts - Thank you, numma_cway.
+	± Fixed Link colour in Status Bar when News Banner is hidden - Thank you, Chris.
+	+ Added style for EmoticonsDisplay - Thank you, monkyyx.
+	+ Added style for UserVolumeWidget - Thank you, monkyyx.
+	± Fixed clinched Refresh Button - Thank you, monkyyx.
+	+ Added style for ChannelDescriptionEditTearOffWidget (including QToolButtons, QFrame#line_3)
+	+ Added style for FileBrowser (including QToolButtons)
+	+ Added/Edited a couple of icons
+	± Adjusted .tpl's
+	± Fixed font colour of QWidget#NewsBanner (Kind of, I guess?)
+	± Fixed QToolButton#toolButtonIcon, QToolButton#AwayButton, QToolButton#SpeakerMuteButton
+	+ Added style for Tool tips
+	± Fixed several small design bugs
+ * 26.01.2016 Version 1.1.0
+	± Adjusted Sellout Branding to make it less sellout'ish
+	± Fixed scrollArea backgrounds on very tight settings - Thank you, monkyyx.
+	± Fixed broken sub-/context-menu icons - Thank you, monkyyx.
+	+ Added style for Virtual Server Manager - Thank you, monkyyx.
+	± Fixed Plugins - Thank you, monkyyx.
+	± Adjusted QTabWidget (still not satisfied) - Thank you, monkyyx.
+	± Adjusted User links in chat - Thank you, monkyyx.
+	+ Added German .tpl's - Thank you, monkyyx.
+	+ Added style for Temporary Server Passwords
+	+ Added style for 3D Sound Settings
+	+ Added style for Permission Information
+	± Changed addressing of QToolButtons (100 lines vs 375 lines)
+	* Massive clean-up of code (842 lines vs 1112 lines)
+	+ Added/Edited a couple of icons
+	* Lots of minor tweaks
+	+ Added styles for TabBar Borders and ScrollBar Buttons (see end of the document for further instructions) - Requested by monkyyx, and Deireadh.
+ * 31.01.2016 Version 1.1.1
+	± Fixed Plugins menu Menu Button clipping - Thank you, monkyyx.
+	+ Added more information to .tpl's
+	± Fixed Out-of-focus font colour in QTableView (Could occur in Settings -> Options -> Messages)
+	± Adjusted style of Server- and ChatTabCloseButton - Thank you, monkyyx.
+	± Fixed ScrollBar appearing in PokeDialog - Thank you, monkyyx.
+	+ Added :disabled-style to a few forgotten GUI widgets - Thank you, monkyyx.
+	± Adjusted HostMessage style to make links better readable - Thank you, Patrick1164.
+	+ Added min-width to several Permission windows - Thank you, monkyyx.
+	± Adjusted style of detached ToolBar
+	± Adjusted TabBar for now to avoid "grey line"
+	+ Added/Edited a couple of icons
+ * 31.01.2016 Version 1.2.0
+ 	* Restore Refresh button style in serverinfo.tpl and serverinfo_de.tpl - Thank you, monkyyx.
+ 	± Fixed missing server name - Thank you, monkyyx.
+	± Adjusted "PokeReceived" font-weight to match "PokeGiven" - Thank you, monkyyx.
+	+ Added :disabled-style to a few forgotten GUI widgets - Thank you, monkyyx.
+	* Included default .tpl's. If you want to use the extended version, navigate to "%APPDATA%\TS3Client\styles\DarkenTS\_Extended", copy and paste all .tpl's into the style root folder. - Requested by monkyyx
+		* Additionally you can backup all .tpl's into the _Default folder.
+		* From this point on all changes to .tpl's are applied to the extended version, unless explicitly stated otherwise.
+ * 10.02.2016 Version 1.2.1
+ 	± Fixed text field in VirtualServerEditDialog showing borders they should not - Thank you, monkyyx.
+ 	± Adjusted .tpl's to show consistent spacing when certain variables are empty (Partially probably a little (too) hacky - Most likely subject to change)
+ 	± Adjusted some styles to fit into the general theme
+ 	± Adjusted display of country in clientinfo.tpl to fit the theme
+ 		* If you want to re-add the flag simply remove "<!--" and "-->" in line 98 (eng), respectively line 97 (de). Additionally remove line 103 - 105 (eng), respectively line 102 - 104 (de).
+ 	± Fixed "File Browser" QToolButtons hover and pressed state not working - Thank you, monkyyx.
+ 	± Changed hover colour of QMenuBar items - Thank you, monkyyx.
+ 	+ Added/Edited a couple of icons
+ * 12.02.2016 Version 1.2.2
+  	± Fixed QToolButton:on not having hover effects - Thank you, monkyyx.
+  	± Adjusted style of SearchFrame (Ctrl+F)
+  	± Fixed Out-of-focus font colour in QListWidget (Could occur in Settings -> Plugins)
+  	± Fixed style of VADDisplay
+  	± Fixed Out-of-focus font colour in QTableWidget (Could occur in Settings -> Options)
+  	± Fixed channelinfo.tpl being broken when embedded images exceeded a certain size (see line 62) - Thank you, Chris.
+  	+ Added plugin information to default .tpl's
+ * 24.02.2016 Version 1.2.3
+ 	+ Added display of skin version in ChatLineEdit
+ 	+ Added QTableView::item:selected
+ 	± Adjusted colour of non-Guest groups in QListView#groupsListView (Permissions - separated from QListView to allow different colours in permissions view without affecting all ListViews) - Thank you, Patrick1164.
+ * 26.04.2016 Version 1.2.4
+ 	± Fixed invisible QScrollBar Buttons overlapping QScrollBar Handle
+ 	± Adjusted background for Banner Gfx URL
+ 	± Adjusted some icons
+ * 05.06.2016 Version 1.3.0
+ 	- Removed QWizard code to reflect changes in 'Client Release 3.0.19 01 Apr 2016'
+ 	- Removed QWizard icon
+ 	+ Added QColorLuminancePicker style
+ 	- Removed Separator in QStatusBar
+ 	* Massive Icon Overhaul. 143 brand new icons!
+  		* Per default the icon highlighting channels using the CELT codec is removed. To display the icon, open "%APPDATA%\TS3Client\gfx\DarkenTS\settings.ini", navigate to line 133, replace "celt0" with "celt", save the document
+  		  and restart TeamSpeak if needed.
+  		* All icons were created on the basis of http://fontawesome.io/ icons.
+  		* Info for Theme creators: FOLDER_CREATE needs "add_folder.png", CHANNEL_PRIVATE is using REGISTER icon
+ * 09.06.2016 Version 1.3.1
+ 	+ Added Spanish and French translation of default .tpl's
+ 	* Minimized icon size from 512x512 to 128x128 (7,53 MB vs 840 KB)
+ * 27.07.2016 Version 1.4.0
+ 	± Changed version numbering to represent changes to the theme in a (hopefully) better way
+	± Adjusted colour of several icons
+	± Adjusted min-width of QListView#whisperListView
+	+ Disabled functionless ScrollBar in ChannelGroupsOfClientDialog
+	+ Added missing QHeaderView background (only header rows (:selection) were styled, visual bugs could appear for example in "List All Clients" if search yielded no results)
+	± Fixed Out-of-focus font colour in QTableWidget (this time for real)
+	+ Added icons for hardware_input_muted and hardware_output_muted - Thank you, Shadow86.
+		* Alternative designs are available in the "/gfx/DarkenTS" folder
+	± Changed activate_microphone icon to a more logical one
+	+ Added missing QHeaderView arrows (sort indicator)
+	+ Added missing QComboBox::down-arrow:disabled arrow
+	* Updated GUI elements icons
+	± Changed GUI elements file structure
+		* Deleting the existing theme folder "/styles/DarkenTS" before installing the update is recommended
+ * 22.10.2016 Version 1.4.9 (MyTeamSpeak Beta Release)
+ 	+ Added styles for AboutQt and ConfigQt to support plugins that use those to display information/options/etc
+ 	+ Added newly introduced icons (13)
+ 	± Adjusted a couple of existing icons
+ 	± Adjusted QWidget#profileManager min-width
+ 	± Adjusted whisperListView to reflect changes of new patch
+ 	* Overhauled complete code, removed unnecessary bits, consolidated redundant bits, adjusted wrong colour values to standardise the theme
+ 	* Retried Versioning another time. Last attempt. I promise. Semantic Versioning X.Y.Z anyone?
+ 	± Fixed incorrect font-family setting
+ 	+ Added Sound3DWidget style
+ 	± Changed display of channel topic and channel description to display large descriptions in a better way
+ 	± Changed a few attributes in the .tpl's. Notable: Display of channel topic and description
+ 	+ Outsourced .tpl CSS styles into style.css - Shout-out to fonta for bringing this option to my attention!
+ * 23.10.2016 Version 1.4.9b
+ 	± Fixed code error breaking the design ("Everything that starts must come to an end.")
+ 	± Fixed "extended client info" being default
+ * xx.xx.2016 Version 1.5.0
+  	+ "Dissension"
+  	+ Created a Git repository which can be found at https://gitlab.com/Brady_The/DarkenTS - Requested by dinubish.
+ 	± Fixed some small 
+ * Known problems:
+ 	* Hyperlinks (except for links in chat and channel description), friend/foe name colours, name colours in 3DSoundWidget, position of user avatars and status icons, etc use default style
+ 		* Those values are hard-coded and cannot be changed from my side. A style implementation by the TeamSpeak team is unprovided for in the foreseeable future (http://goo.gl/WTVSQA).
+ 	* PreviewWidget has no style (style option needs to be implemented by the TeamSpeak team)
+ 	* Spacing in channelinfo.tpl is off in channels with a Max Users setting of 0. Too obscure/rare to adjust.
+ 	* Private channels are using register.png instead of channel_private.png. Nothing I can do from my side.
+ 	* "Customize Toolbar" separator icon seems to be hard-coded and cannot be changed from my side.
+ 	* "Customize Toolbar" QToolBar icons seem to be hard-coded and cannot be changed from my side.
+ 	* "Expand QMenuBar" and "Expand QToolBar" (if Main Window width is too small to display full Menu and Tool Bar) icons seem to be hard-coded and cannot be changed from my side.
+ 	* Overwolf icon is hard-coded and cannot be changed from my side.
+ 	* Add-ons that use QOpenGLWidget are not supported by this theme and may be limited in functionality.
+ 	* QMessageBox in Sound3DWidget seems non-customisable. Too rare to pursue.
+ 	* Addon "Browse Online" feature is pulling information straight from the web and cannot be styled 
+ * I have by the way no idea how software Versioning works. (Maybe I do now a little.)
+ * Shout-out to xPoke for his awesome Mumble design (https://github.com/xPoke/MetroMumble/releases/) which has been the inspiration for DarkenTS.
+ */
+
+QWidget#NewsBanner {																/* Font colour News Ticker (for some reason my design requires it to be on top of the document to work) */
+	background-color: transparent;
+	color: rgb(216,216,216);
+	/* background-color is required to avoid black default font colour of News Ticker. Transparent is sufficient, but can be replaced with a colour if wished.
+	   Don't ask me why. My qss is probably faulty at same place. Doesn't like comments in same line. */
+}
+
+QMainWindow {
+	background-color: rgb(46,46,46);
+}
+
+QWidget {																			/* TeamSpeak's default settings */
+	font-family: "Segoe UI", Arial, sans-serif;
+	font-size: 10pt;
+	color: rgb(216,216,216);
+}
+
+/* ---- Menu ---- */
+
+QMenuBar {																			/* Menu (Connections ... Help)  */
+	margin-top: 6px;
+	margin-left: 6px;
+	margin-bottom: 6px;
+	background-color: transparent;
+}
+
+QMenuBar::item:selected {															/* Menu OnMouseOver */
+	background-color: rgb(62,79,94);
+}
+
+/* ----Sub-menu ---- */
+
+QMenu {																				/* Sub-menu Border */
+	border: 1px solid rgb(29,29,29);
+	background-color: rgb(43,43,43);
+}
+
+QMenu::item {
+	background: transparent;
+	padding: 3px;
+	padding-left: 20px;
+	padding-right: 15px;
+}
+
+QMenu::item:selected {																/* Sub-menu Label OnMouseOver  */
+	background-color: rgb(62,79,94);
+}
+
+QMenu::item:disabled {																/* Sub-menu Disabled Label */
+	color: rgb(72,72,72);
+}
+
+QMenu::item:disabled:selected {														/* Sub-menu Disabled Hover Label (better readability of disabled items on dark background when hovering over it) */
+	color: rgb(216,216,216);
+}
+
+QMenu::separator {																	/* Sub-menu Separator  */
+	height:1px;
+	margin-left:1px;
+	margin-right:1px;
+	background-color: rgb(85,85,85);
+}
+
+QMenu::indicator:checked,
+QMenu::indicator:non-exclusive:checked {											/*Sub-menu Indicator Checked/Not Checked */
+	image: url('gfx:DarkenTS/gui/controls/checked_checkbox.png');
+		height: 16px;
+		width: 16px;
+}
+
+/* ---- Server List ---- */
+
+QWidget#page1,																		/* Removing Standard Filter White Space */
+QWidget#page2 {																		/* Removing Advanced Filter White Space */
+	background-color: rgb(34,34,34);
+}
+
+QToolBox::tab {																		/* Standard Filter */
+    background-color: rgb(68,68,68);
+}
+
+QToolBox::tab:hover {																/* Filter Buttons Hover */
+    background-color: rgb(85,85,85);	
+}
+
+/* ---- Connection Info ---- */ 
+
+QTabWidget#byPacketTypeInformationTabWidget::pane,									/* Tab Widget (Self ->) Connection Info */
+QTabWidget#tabWidget::pane {														/* Tab Widget (Help ->) About TeamSpeak 3*/
+	border: 1px solid rgb(85,85,85);
+    position: absolute;
+    top: -0.8em; 
+}
+
+QTabWidget#byPacketTypeInformationTabWidget::tab-bar,								/* Tab Widget (Self ->) Connection Info */
+QTabWidget#tabWidget::tab-bar {														/* Tab Widget (Help ->) About TeamSpeak 3*/
+   alignment: center;
+}
+
+/* ---- Permissions ---- */
+
+QWidget#scrollAreaWidgetContents {													/* Removing Standard Permissions Display White Space */
+	background-color: rgb(34,34,34);
+}
+
+PermGroupsListView#groupsListView {													/* Forcing min-width to avoid ScrollBars where not necessary */
+	min-width: 200px;
+}
+
+PermissionsTreeView#permissionsTreeView {
+	min-width: 405px;
+}
+
+QWidget#easyPermissionsWidget {
+	min-width: 536px;
+}
+
+/* ---- Tools ---- */
+
+ImprovedWidget,																		/* Pretty much all sub windows (Connections -> Connect ...  Tools -> Options) */
+EmoticonsDisplay,																	/* Emoticon selection screen (opens on Click on emote next to Chat line) */
+QWidget#pageGeneral,																/* Removing General White Space (Tools -> Contact) */
+QWidget#pageDisplay,																/* Removing Display White Space (Tools -> Contact) */
+QWidget#pageIgnore,																	/* Removing Ignore White Space (Tools -> Contact) */
+QWidget#pageWhisper {																/* Removing Whisper White Space (Tools -> Contact) */
+	background-color: rgb(34,34,34);
+} 
+
+QFrame#uploadLimitFrame,															/* Tools -> File Transfers */
+QFrame#downloadLimitFrame {
+	border: 1px solid rgb(68,68,68);
+}
+
+/* -- Text Fields -- */
+
+QTextEdit {																			/* Anything that allows multiple line user input (Examples: Edit Virtual Server -> Welcome Message, Edit Channel -> Description) */
+	border: 1px solid transparent;
+	background-color: rgb(29,29,29);
+	color: rgb(216,216,216);														/* Colour is needed, because adding a highlight keyword in Client/Server Log will reset all default font colours to black */
+}
+
+QTextEdit:hover {
+	border: 1px solid rgb(85,85,85);
+}
+
+QTextEdit:focus,
+QTextEdit:focus:hover {
+	border: 1px solid rgb(62,79,94);
+}
+
+/* ---- Tool Bar ---- */
+
+QToolBar {
+	border: none;
+	background-color: rgb(46,46,46);												/* Important to avoid white default background colour if ToolBar is detached */
+}
+
+QToolBar QToolButton {																/* Default design ToolButton in ToolBar (AwayButton ... HosterButton) */
+	border: 1px solid transparent;
+		border-radius: 2px;
+	background-color: rgb(46,46,46);
+}
+
+QToolBar QToolButton:on {															/* Activated (Toggle On, Example: Mute Microphone) ToolButton in ToolBar */
+	border: 1px solid rgb(68,68,68);
+	background-color: rgb(68,68,68);
+}
+
+QToolBar QToolButton:hover,
+QToolBar QToolButton:on:hover,
+QToolBar QToolButton:hover:focus
+QToolBar QToolButton:on:hover:focus {
+	border: 1px solid rgb(62,79,94);
+	background-color: rgb(62,79,94);
+}
+
+QToolBar QToolButton:pressed,
+QToolBar QToolButton:on:pressed,
+QToolBar QToolButton:pressed:focus,
+QToolBar QToolButton:on:pressed:focus {
+	border-color: rgb(62,79,94);
+	background-color: rgb(72,72,72);
+}
+
+QToolBar QToolButton:disabled {														/* Neutralise effects of QToolButton:disabled on "Activate Microphone" Button */
+	border-color: transparent;
+	background-color: rgb(46,46,46);
+}
+
+QToolBar#AddonBrowserToolBar {
+	background-color: transparent;
+}
+
+/* ---- Tab Bar ---- */
+
+QTabBar::tear {																		/* Remove Tear (Outlined yellow: https://i.sli.mg/i1Sj3O.png ) */
+   width: 0px;
+   border: none;
+}
+
+QTabBar::tab {
+	background-color: rgb(29,29,29);
+	color: rgb(216,216,216);
+	text-align: center;
+	min-width: 8px;
+	padding: 3px;
+}
+
+QTabBar::tab:selected,																/* Style of Selected Server/Channel Tab + Selected Hover */
+QTabBar::tab:selected:hover {
+	background-color: rgb(62,79,94);
+}
+
+QTabBar::tab:hover {																/* Unselected Server/Channel Tab Hover */ 
+	background-color: rgb(85,85,85);
+}
+
+QTabBar::scroller {																	/* Width of the scroll buttons */
+	width: 20px;
+}
+
+ImprovedTabBarCloseButton#ServerTabCloseButton,										/* Close Server Tab Button */
+ImprovedTabBarCloseButton#ChatTabCloseButton {										/* Close Chat Tab Button */
+	border: none;
+	background-color: transparent;
+}
+
+ImprovedTabBarCloseButton#ServerTabCloseButton:hover,
+ImprovedTabBarCloseButton#ChatTabCloseButton:hover {
+	border: 0px solid transparent;
+	background-color: rgba(0,0,0,0.1);
+}
+
+ImprovedTabBarCloseButton#ServerTabCloseButton:pressed,
+ImprovedTabBarCloseButton#ChatTabCloseButton:pressed {
+	border: 0px solid transparent;
+	background-color: rgba(0,0,0,0.2);
+}
+
+/*QTabBar QToolButton {
+		border-radius: 0px;															/* Neutralise effects of QToolButton on QTabBar QToolButton::left-arrow and right-arrow *
+}*/
+
+QTabBar QToolButton::left-arrow {													/* Tab Bar Scroll Button Left */
+    image: url('gfx:DarkenTS/gui/arrows/left.png');
+}
+
+QTabBar QToolButton::right-arrow {													/* Tab Bar Scroll Button Right */
+    image: url('gfx:DarkenTS/gui/arrows/right.png');
+}
+
+/* ---- TreeTab/Tree View ---- */
+
+QWidget {
+	border: none;
+}
+
+QWidget::pane {
+	border: 0px solid transparent;
+}
+
+QTreeView {																			/* ServerTreeView (Channels, Users, etc.) */
+	border: 1px solid rgb(29,29,29);
+	background-color: rgb(29,29,29);
+		alternate-background-color: rgb(29,29,29);									/* Prevent artefacts when switching from style that utilizes alternate-background-color (Example: bluesky) */
+	outline: none;
+}
+
+QTreeView::item:hover {
+	background-color: rgba(62,79,94,0.5);	/* Make it QTreeView::item:hover ???*/
+}
+	
+QTreeView::item:selected:active,
+QTreeView::item:selected:!active {
+	background-color: rgb(62,79,94);
+	color: rgb(216,216,216);														/* Important for !active to avoid black default font colour of Channels, Users, etc if "out of focus" (Example: Channel selected -> Edit Channel) */
+}
+	
+QTreeView::branch:open:has-children {												/* Only display arrows on open branches that have children */
+    image: url('gfx:DarkenTS/gui/arrows/branch_open.png');
+}
+
+QTreeView::branch:open:has-children:hover {
+    image: url('gfx:DarkenTS/gui/arrows/branch_open_hover.png');
+}
+
+QTreeView::branch:closed:has-children {												/* Only display arrows on closed branches that have children */
+    image: url('gfx:DarkenTS/gui/arrows/branch_closed.png');
+}
+
+QTreeView::branch:closed:has-children:hover {
+    image: url('gfx:DarkenTS/gui/arrows/branch_closed_hover.png');
+}
+
+/* ---- InfoTab ---- */
+
+Banner {																			/* Background of Banner element when server is using Host Banner */
+	background: rgb(29,29,29);
+}
+
+TextBrowser#InfoFrame,
+TextBrowser#InfoFrame:focus {
+	border: 1px solid rgb(29,29,29);
+	background-color: rgb(29,29,29);
+	font-size: 9pt;
+}
+
+/* ---- PreviewView ---- */
+
+/* Not supported as of yet (Version 3.1 17.08.2016) */
+
+/* ---- SearchFrame (Ctrl+F) ---- */
+
+SearchFrame {
+	min-height: 35px;
+	margin-top: -5px;
+}
+
+QPushButton#SearchFrameNextButton {
+	min-width: 68px;
+}
+
+/* ---- ChatTab ---- */
+ 
+TextBrowser#ChatTab,
+TextBrowser#ChatTab:focus {
+	border: 1px solid rgb(29,29,29);
+	background-color: rgb(29,29,29);
+}	 
+
+ChatLineEdit {																		
+	background-image: url('gfx:DarkenTS/gui/logos/chatlogo.png');				/* Literal Sellout Branding */
+		background-position: right middle;
+		background-repeat:no-repeat;
+}
+
+ChatLineEdit:hover {																		
+	background-image: url('gfx:DarkenTS/gui/logos/chatlogo_v.png');
+		background-position: right;
+		background-repeat:no-repeat;
+}
+
+QTextEdit#ChatLineEdit[helpTextVisible="true"] {									/* "Enter Chat Message..." */
+	border: 0px solid transparent;
+	background-color: rgb(59,59,59);
+}	 
+	
+QTextEdit#ChatLineEdit[helpTextVisible="false"] {									/* *Entering chat message* */
+	border: 0px solid transparent;
+	background-color: rgb(59,59,59);
+}
+
+/* ---- Scrollbar ---- */
+
+QScrollBar:vertical {																/* Design Scrollbar (no attributes = default scrollbar) */
+	background-color: rgb(46,46,46);	/*???*/
+	width: 16px;
+}
+	
+QScrollBar::handle:vertical { 														/* Design ScrollThumb */
+	background-color: rgb(102,102,102);
+	min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {													/* Design ScrollThumb Hover */
+	background-color: rgb(136,136,136);
+}
+	
+QScrollBar::add-page:vertical,														/* Design ScrollTrack (add-page = area below ScrollThumb, sub-page = area above ScrollThumb) */
+QScrollBar::sub-page:vertical {
+	background-color: rgb(46,46,46);
+}
+
+QScrollBar:horizontal {
+	height: 16px;
+	background-color: rgb(46,46,46);
+}
+	
+QScrollBar::handle:horizontal {
+	min-width: 20px;
+	background-color: rgb(102,102,102);
+}
+
+QScrollBar::handle:horizontal:hover {
+		background-color: rgb(136,136,136);
+}
+	
+QScrollBar::add-page:horizontal,
+QScrollBar::sub-page:horizontal {
+		background-color: rgb(46,46,46);
+}
+
+QScrollBar::add-line:vertical,														/* Important if your design features a button-less Scroll bar (if not existent buttons are not disabled, but invisible) */
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:vertical,
+QScrollBar::sub-line:horizontal {
+		width: 0px;
+		height: 0px;
+}
+
+PokeDialog QScrollBar:vertical,														/* H/Not-fix ScrollBar in PokeDialog */
+ChannelGroupsOfClientDialog QScrollBar:vertical {									/* Functionless ScrollBar in ChannelGroupsOfClientDialog disabled */
+	width: 0px;
+}
+
+/* ---- StatusBar ---- */
+
+QStatusBar,																			/* Font colour News, Disconnected/Connected as */
+QStatusBar QLabel {																	/* Tool tip (Example: URL in Channel Description) if News Ticker is disabled */
+	background-color: rgb(29,29,29);
+}
+
+QStatusBar::item {																	/* Removes Separators in StatusBar */
+    border: none;
+}
+
+QSplitter::handle {																	/* Splitter between TreeView, InfoFrame, and MainWindowChatWidget */
+    background: transparent;
+}
+
+/* ---- Options ---- */ 
+ 
+QDialog#MsgDialog {																	/* Exception to make links in Host Message (MODAL) better readable */
+	background: rgb(136,136,136);
+}
+
+PokeDialog#MsgDialog {																/* Counteract above style for other MsgDialogs */
+	background: rgb(34,34,34);
+}
+
+/* -- GUI Widgets -- */
+
+QComboBox,
+QSpinBox,
+QDoubleSpinBox {
+	padding: 4px;
+	min-height: 1em;
+	border: 0px solid transparent;
+	background-color: rgb(68,68,68);
+}
+
+QComboBox QAbstractItemView {														/* ComboBox ItemList */
+    border: 1px solid rgb(29,29,29);
+	background-color: rgb(29,29,29);
+    	selection-background-color: rgb(62,79,94);									/* Colour of the selected item in the item list (Example: Connections -> Connect -> Identity) */
+    }
+
+QToolButton#toolButtonIcon {														/* QToolButton with menu (Example: Permissions -> Server Groups -> Group icon (Standard Permissions Display)) */
+	padding: 2px 8px;
+	min-height: 1em;
+	border: 0px solid transparent;
+	background-color: rgb(68,68,68);
+	padding-right: 16px
+}
+
+QComboBox:disabled,
+QSpinBox:disabled,
+QDoubleSpinBox:disabled,
+QToolButton#toolButtonIcon:disabled {
+	background-color: rgb(40,40,40);
+	color: rgb(72,72,72);
+}
+	
+QComboBox:focus,
+QComboBox:focus:hover,
+QSpinBox:focus,
+QSpinBox:focus:hover,
+QDoubleSpinBox:focus,
+QDoubleSpinBox:focus:hover,
+QToolButton#toolButtonIcon:focus,
+QToolButton#toolButtonIcon:focus:hover {
+	background-color: rgb(62,79,94);
+}
+
+QComboBox:hover,
+QSpinBox:hover,
+QDoubleSpinBox:hover,
+QToolButton#toolButtonIcon:hover {
+	border: 0px solid transparent;
+	background-color: rgb(85,85,85);
+}
+	
+QSpinBox::up-button,
+QDoubleSpinBox::up-button,
+QSpinBox::down-button,
+QDoubleSpinBox::down-button {
+	border: 0px solid transparent;
+}	
+
+QSpinBox::up-arrow,
+QDoubleSpinBox::up-arrow {
+	border: 0px solid transparent;
+    image: url('gfx:DarkenTS/gui/arrows/up.png');
+    	height: 10px;
+    	width: 10px;
+}		
+
+QComboBox::down-arrow,
+QSpinBox::down-arrow,
+QDoubleSpinBox::down-arrow {
+	border: 0px solid transparent;
+    image: url('gfx:DarkenTS/gui/arrows/down.png');
+    	height: 10px;
+    	width: 10px;
+}	
+
+QSpinBox::up-arrow:disabled,
+QDoubleSpinBox::up-arrow:disabled {
+    image: url('gfx:DarkenTS/gui/arrows/up_disabled.png');
+    	height: 10px;
+    	width: 10px;
+}		
+	
+QComboBox::down-arrow:disabled,
+QSpinBox::down-arrow:disabled,
+QDoubleSpinBox::down-arrow:disabled {
+    image: url('gfx:DarkenTS/gui/arrows/down_disabled.png');
+    	height: 10px;
+    	width: 10px;
+}	
+	
+QComboBox::drop-down,																/* ComboBox DropDown "Button" Design */
+QSpinBox::drop-down,
+QDoubleSpinBox::drop-down {
+	border: 0px solid transparent;
+	background-color: transparent;
+	subcontrol-origin: padding;
+		subcontrol-position: top right;
+}
+
+QPushButton {
+	padding: 3px 20px;
+	border: 1px solid rgb(68,68,68);
+	background-color: rgb(68,68,68);
+	font-size: 10pt;
+}
+
+QPushButton:focus,
+QPushButton:hover:focus {
+	border-color: rgb(62,79,94);
+	background-color: rgb(62,79,94);
+}
+	
+QPushButton:hover {
+	border-color: rgb(85,85,85);
+	background-color: rgb(85,85,85);
+}
+
+QPushButton:pressed,
+QPushButton:pressed:focus {
+	border-color: rgb(62,79,94);
+	background-color: rgb(62,79,94);
+}
+
+QPushButton:disabled {
+	border-color: rgb(40,40,40);
+	background-color: rgb(40,40,40);
+	color: rgb(72,72,72);
+}
+
+QToolTip {																			/* Tool Tips */
+	border: 1px solid rgb(29,29,29);
+	background-color: rgb(29,29,29);
+	color: rgb(216,216,216);
+}
+
+QGroupBox {																			/* Box that groups elements together (Example: Tools -> Options -> Application -> Server */
+	border: none;																	/* Removal of horizontal ruler in Group Boxes */
+	padding-top: 13px;																/* Fix of resulting displacement of elements */
+	background-color: rgb(46,46,46);
+}
+
+QLineEdit {																			/* Anything that allows one line user input (Example: Connections -> Connect)*/
+	padding: 4px;
+	min-height: 1em;
+	border: 1px solid transparent;
+	background-color: rgb(29,29,29);
+}
+
+QLineEdit:focus,
+QLineEdit:focus:hover,
+ImprovedTextEdit:focus,
+ImprovedTextEdit:focus:hover {
+	border: 1px solid rgb(62,79,94);
+}		
+	
+QLineEdit:hover,
+ImprovedTextEdit:hover {
+	border-color: rgb(85,85,85);
+}
+
+QTextEdit:disabled,
+QLineEdit:disabled,
+QCheckBox:disabled,
+QRadioButton:disabled {
+	color: rgb(72,72,72);
+}
+
+/* -- CheckBox (Example: Connections -> Server List -> Standard Filter -> Users -> Hide Empty Server) -- */
+/* -- CheckBox in GroupBox (Example: Tools -> Options -> Capture -> "Advanced Options" -- */
+/* -- CheckBox in TreeView (Example: Permissions -> Server Groups -> Permission (Advanced Permissions Display) -- */
+/* -- RadioButton (Example: Connections -> Server List -> Advanced filter -> Password -> Show all) -- */
+
+QCheckBox::indicator,															
+QGroupBox::indicator,
+QTreeView::indicator,
+QRadioButton::indicator {
+	height: 12px;
+	width: 12px;
+	border: 1px solid rgb(68,68,68);
+	background-color: rgb(68,68,68);
+}
+
+QRadioButton::indicator {
+	border-radius: 6px;																/* Giving the RadioButton a RadioButton look (round) */
+}
+
+QCheckBox::indicator:hover,
+QGroupBox::indicator:hover,
+QTreeView::indicator:hover,
+QRadioButton::indicator:hover {
+	background-color: rgb(85,85,85);
+}
+
+QCheckBox::indicator:checked,		
+QGroupBox::indicator:checked,
+QTreeView::indicator:checked {
+	image: url('gfx:DarkenTS/gui/controls/checked_checkbox.png');
+}
+
+QRadioButton::indicator:checked {
+	image: url('gfx:DarkenTS/gui/controls/checked_radiobutton.png');
+}
+
+QCheckBox::indicator:checked:disabled,		
+QGroupBox::indicator:checked:disabled,
+QTreeView::indicator:checked:disabled {
+	image: url('gfx:DarkenTS/gui/controls/checked_checkbox_disabled.png');
+}
+
+QRadioButton::indicator:checked:disabled {
+	image: url('gfx:DarkenTS/gui/controls/checked_radiobutton_disabled.png');
+}
+
+/* -- Tool Button (Example: Bookmarks -> Manage Bookmarks -> Add Bookmark) -- */
+
+QToolButton {
+	padding: 2px;
+	border: 1px solid rgb(68,68,68);
+		/*border-radius: 2px;*/
+	background-color: rgb(68,68,68);
+	font-size: 10pt;
+}
+
+QToolButton:hover,
+QToolButton:hover:focus {
+	border-color: rgb(89,89,89);
+	background-color: rgb(89,89,89);
+}
+
+QToolButton:pressed,
+QToolButton:pressed:focus {
+	border-color: rgb(62,79,94);
+	background-color: rgb(62,79,94);
+}
+
+QToolButton:disabled {
+	border-color: rgb(40,40,40);
+	background-color: rgb(40,40,40);
+	color: rgb(72,72,72);
+}
+
+/* -- Special Cases to prevent misalignment -- */
+
+QToolButton#whisperListAddButton,													/* Tools -> Whisper List */
+QToolButton#whisperListDelButton,
+QToolButton#whisperListRenameButton {
+	font-size: 9pt;																	/* Smaller font to keep List Views aligned (Obsolete with version 3.1, kept for style reasons) */
+}
+
+QToolButton#AwayButton,																/* Width of ToolBar Buttons with menu to prevent clipping issues with menu arrows */
+QToolButton#SpeakerMuteButton {
+	padding-right: 14px;
+}
+
+QToolButton::menu-arrow {															/* Style of menu arrow */
+    image: url('gfx:DarkenTS/gui/arrows/down.png');
+    	height: 10px;
+    	width: 10px;
+	subcontrol-position: right center;
+}
+
+QToolButton::menu-button {
+	border: 1px solid transparent;
+}
+
+QToolButton#EmoticonButton {														/* Exception Emoticon Button */
+	border: none;
+	background-color: transparent;
+}
+
+QToolButton#EmoticonButton:hover {
+	background-color: rgb(89,89,89);
+}
+
+QToolButton#EmoticonButton:pressed,
+QToolButton#EmoticonButton:pressed:focus {
+	background-color: rgb(62,79,94);
+}
+
+/* -- Slider (Example: Tools -> Options -> Playback) -- */
+
+QSlider::groove {																	/* "Body" of Slider */
+	height: 5px;
+	border: 1px solid rgb(59,59,59);
+}
+
+QSlider::sub-page {																	/* Colour of Slider before the handle */
+	background-color: rgb(72,109,141);
+}
+
+QSlider::add-page {																	/* Colour of Slider after the handle */
+	background-color: rgb(59,59,59);
+}
+
+QSlider::handle {																	/* Handle of Slider */ 
+	width: 27px;
+	margin: -5px -1px;																/* Per default the handle is placed in the groove. This setting expands the handle by 5px. -1px makes sure that the handle doesn't "leave" the groove */
+	border: 1px solid rgb(34,34,34);
+		border-radius: 3px;															/* Rounds off the handle */						
+	background-color: rgb(119,119,119);
+}
+
+QSlider::handle:hover {
+	background-color: rgb(136,136,136);
+}
+
+QFrame#line,																		/* Horizontal ruler */
+QFrame#line_2,
+QFrame#line_3,
+QFrame#line_4 {
+	background-color: rgb(85,85,85);
+}
+
+/* -- List View (Example: Tools -> Options -> Application ... Notifications) -- */
+
+QListView {																			/* includes the Addon list in "Tools -> Options -> Addons -> My Addons" */
+	border: 1px solid rgb(68,68,68);
+	background-color: rgb(34,34,34);
+	font-size: 12pt;
+	outline: none;																	/* Removes dotted outline of selected elements. */
+	color: rgb(216,216,216);														/* Colour is needed, because adding a highlight keyword in Client/Server Log will reset all default font colours to black */
+}
+
+QListView#ContentsWidget {															/* Set min-width for Options ListView (Application ... Notifications) to prevent cutting off */
+	min-width: 150%;
+}
+
+QListView#remoteWhisperListView, 													/* Force whisperListView to use adjusted values */
+QListView#localWhisperListView {
+	min-width: 240%;
+}
+
+QListView::item:selected {															/* Important to avoid black default font colour of items if "out of focus" */
+	color: rgb(216,216,216);
+}
+
+QListView#groupsListView::item:!selected {											/* Important to avoid blue default font colour of unselected items (Example: Permissions -> Server Groups) */
+	color: rgb(216,216,216);
+}
+
+QListView#ContentsWidget,															/* Navigation in Settings -> Options = borderless */
+ProfileListWidget {																	/* Profile List in Settings -> Options = borderless */
+	border: 0px solid transparent;
+}
+
+QWidget#profileManager {															/* Force profileManager (Playback, Capture, etc) to use adjusted values */
+	min-width: 150%;
+}
+
+QWidget#HeadlineLabel,
+ProfileListWidget {
+	background-color: rgb(46,46,46);
+}
+
+QLabel#OptionsHeadlineTitleLabel {
+	font-size: 12pt;
+}
+
+QListView::item:selected:active,
+QListView::item:selected:!active {
+	background-color: rgb(62,79,94);
+}
+
+QListView::item:hover {
+	background-color: rgba(62,79,94,0.5);
+}
+
+/* -- Tables (Example: Connections -> Server List) -- */
+
+QHeaderView,
+QHeaderView::section {																/* Important to avoid visual bugs which could appear for example in "List All Clients" if search yielded no results) */
+	background-color: rgb(46,46,46);
+}
+
+QHeaderView::down-arrow {															/* Table header sort indicator */
+	image: url('gfx:DarkenTS/gui/arrows/header_down.png');
+}
+
+QHeaderView::up-arrow {
+    image: url('gfx:DarkenTS/gui/arrows/header_up.png');
+}
+
+QTableView {
+	border: 1px solid rgb(29,29,29);
+	background-color: rgb(29,29,29);
+		alternate-background-color: rgb(29,29,29);
+	outline: none;
+}
+
+QTableView::item {
+	border: none;																	/* Important to avoid glitches in certain tables (Example: Tools -> Options -> Hotkeys) */
+	color: rgb(216,216,216);														/* Important to avoid white default font colour of selected items */
+}
+
+QTableView::item:hover {
+	background-color: rgba(62,79,94,0.5);
+}
+
+QTableView::item:selected {
+	background-color: rgb(62,79,94);
+}
+
+QTableWidget {
+    selection-color: rgb(216,216,216);												/* Important to avoid black default font colour of selected hotkey if "out of focus" (Example: Tools -> Options -> Hotkeys) */
+}
+
+/* ---- Sound3DWidget (Example: *Right-click Channel* -> Setup 3D Sound) ---- */
+
+Sound3DWidget QWidget {																/* Setting background for the XY graph. Unfortunately we cannot address it directly because it has no object name */
+	background-color: rgb(68,68,68);
+}
+
+Sound3DWidget QLabel {																/* Counteract unwanted changes from above */
+	background-color: transparent;
+}
+
+Sound3DWidget QTreeWidget {
+	background-color: rgb(29,29,29);
+}
+
+Sound3DWidget QGroupBox {
+	background-color: rgb(46,46,46);
+}
+
+Sound3DWidget QCheckBox {
+	background-color: transparent;
+}
+
+Sound3DWidget QPushButton::menu-indicator {											/* Setting menu-indicator for "Add Server Group" and "Add Channel Group" buttons */
+	image: url('gfx:DarkenTS/gui/arrows/down.png');
+		height: 10px;
+    	width: 10px;
+    	padding-right: 3px;
+    	subcontrol-position: center right;
+}
+
+/* -- Bits and Pieces -- */
+
+QTextBrowser#licenseTextBrowser {													/* Help -> View License */
+	border: none;
+}
+
+QWidget QColorLuminancePicker {														/* Background of Luminance Picker in QColorDialog (Select Color in Advanced Channel description, for example - Arrow colour is being set by color) */
+  background-color: transparent;
+}
+
+VADDisplay {																		/* Tools -> Options -> Capture -> Voice Activation Detection */
+	background: rgb(68,68,68);														/* needs "background"! DOES IT??? */
+}
+
+QDialog,
+AboutQt,																			/* Support plugins that use AboutQt and ConfigQt to display information/options/etc */
+ConfigQt {
+	background-color: rgb(34,34,34);
+	/*FONTCOLOUR*//*XXX*//*NEEDS CHECKING*/
+}
+
+/* https://i.sli.mg/Y84Xfa.jpg */
+
+/* -------- C U S TO M I S A T I O N -------- */
+
+/* -- BUTTON SETTINGS (Remove "/*" in line 1037. Remove "* /" in line 1109. Save and close the document. -- */
+
+/*QScrollBar:vertical {
+	margin: 16px 0px 16px 0px;
+ }
+
+QScrollBar::sub-line:vertical {
+	width: 16px;	
+	height: 16px;
+    background: rgb(102,102,102);
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+ 
+QScrollBar::add-line:vertical {
+	width: 16px;
+	height: 16px;
+    background: rgb(102,102,102);
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical:hover,
+QScrollBar::add-line:vertical:hover {
+	background-color: rgb(136,136,136);
+}
+
+QScrollBar::up-arrow:vertical {
+	image: url('gfx:DarkenTS/gui/arrows/up.png');
+	    height: 10px;
+    	width: 10px;
+ }
+ 
+QScrollBar::down-arrow:vertical {
+	image: url('gfx:DarkenTS/gui/arrows/down.png');
+    	height: 10px;
+    	width: 10px;
+}
+
+QScrollBar:horizontal {
+	margin: 0px 16px 0px 16px;
+ }
+
+QScrollBar::sub-line:horizontal {
+	width: 16px;	
+	height: 16px;
+    background: rgb(102,102,102);
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+}
+ 
+QScrollBar::add-line:horizontal {
+	width: 16px;
+	height: 16px;
+    background: rgb(102,102,102);
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:horizontal:hover,
+QScrollBar::add-line:horizontal:hover {
+	background-color: rgb(136,136,136);
+}
+
+QScrollBar::left-arrow:horizontal {
+	image: url('gfx:DarkenTS/gui/arrows/left.png');
+	    height: 10px;
+    	width: 10px;
+ }
+ 
+QScrollBar::right-arrow:horizontal {
+	image: url('gfx:DarkenTS/gui/arrows/right.png');
+	    height: 10px;
+    	width: 10px;
+}*/
+
+/* -- BORDER SETTINGS (Use at own accountability | Important: Don't forget to complete the comment syntax (replace "~" with "*" or the style will break -- */
+/* -- Visit http://doc.qt.io/qt-4.8/stylesheet-examples.html#customizing-qtabwidget-and-qtabbar for a simplified solution -- */
+/*
+QTabBar::tab,
+QTabBar::tab:last:!selected {
+	border-left: 2px solid #2af614;													/* Replace border-left, -top, -right with border if you want to have borders on all sides. ~/
+	border-top: 2px solid #2af614;													/* If you want to add a border to the bottom with a different style you can add border-bottom as well ~/
+	border-right: 2px solid #2af614;
+}
+
+QTabBar::tab:selected,																/* Style of Selected Server/Channel Tab + Selected Hover ~/
+QTabBar::tab:selected:hover {														/* (separate this if different  for hovering over Selected Tab is wished) ~/
+	margin-left: -2px;																/* Margin values need to be border values, unless you want to achieve certain effects ~/	
+    margin-right: -2px;
+
+	border-left: 2px solid #cc3366;													/* See comment QTabBar::tab ~/
+	border-top: 2px solid #cc3366;
+	border-right: 2px solid #cc3366;	
+}
+
+QTabBar::tab:!selected {															/* Remove double border on non-selected tabs ~/
+	border-right: none;																/* border-right = QTabBar::tab:LAST:!selected / border-left = QTabBar::tab:FIRST:!selected ~/
+}
+
+QTabBar::tab:only-one {
+    margin: 0; 																		/* If we only have on Tab, we don't need overlapping margins ~/
+}
+
+QTabBar::tab:first:selected {
+    margin-left: 0; 																/* If the first Tab is selected it doesn't need an overlap on the left / missing border fix ~/
+}
+
+QTabBar::tab:last:selected {
+    margin-right: 0;																/* If the last Tab is selected it doesn't need an overlap on the right / missing border fix ~/
+}
+
+ImprovedTabBar#ChatTabBar::tab {													/* Excluding Chat TabBar ~/
+	border: none;
+}
+*/
