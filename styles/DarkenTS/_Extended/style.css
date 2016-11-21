@@ -1,6 +1,9 @@
-/** CSS Style for channelinfo.tpl, clientinfo.tpl, and serverinfo.tpl
-
- Shout-out to fonta for bringing this option to my attention! **/
+/**
+  Created for DarkenTS
+  Licensed under CC BY-NC-SA 4.0 - https://creativecommons.org/licenses/by-nc-sa/4.0/
+  By @Brady_The, modified by @Bluscream, idea by @fonta
+  Last updated: 11/21/2016
+**/
 
 table#info {
   border-collapse: collapse;
