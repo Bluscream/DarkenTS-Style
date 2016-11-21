@@ -67,16 +67,16 @@
     <td>%%SERVER_UPTIME%%</td>
   </tr>
   <tr>
-    <td class="label">Current Channels:</td>
+    <td class="label">Channels:</td>
     <td>%%SERVER_CHANNELS_ONLINE%%</td>
   </tr>
   <tr title="Total Client Connections: %%SERVER_CLIENT_CONNECTIONS%%">
-    <td class="label">Current Clients:</td>
+    <td class="label">Clients:</td>
     <td>%%SERVER_CLIENTS_ONLINE%% / %%SERVER_MAXCLIENTS%% %%?SERVER_NO_RESERVED_SLOTS%%</td>
     <td>%%SERVER_CLIENTS_ONLINE%% / %%SERVER_MAXCLIENTS%% (<span class="red">-%%?SERVER_RESERVED_SLOTS%% reserved</span>)</td>
   </tr>
   <tr title="Total ServerQuery Connections: %%SERVER_QUERY_CLIENT_CONNECTIONS%%">
-    <td class="label">Current Queries:</td>
+    <td class="label">Queries:</td>
     <td>%%SERVER_QUERYCLIENTS_ONLINE%% / %%SERVER_MAXCLIENTS%%</td>
   </tr>
   %%?PLUGIN_INFO_DATA%%
