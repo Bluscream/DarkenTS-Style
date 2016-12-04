@@ -637,8 +637,20 @@ QTreeView::indicator:checked {
 	image: url('gfx:DarkenTS/gui/controls/checked_checkbox.png');
 }
 
+QCheckBox::indicator:indeterminate {
+	image: url('gfx:DarkenTS/gui/controls/indeterminate_checkbox.png');
+}
+
+QCheckBox::indicator:indeterminate:pressed {
+    image: url('gfx:DarkenTS/gui/controls/indeterminate_checkbox_pressed.png');
+}
+
 QRadioButton::indicator:checked {
 	image: url('gfx:DarkenTS/gui/controls/checked_radiobutton.png');
+}
+
+QCheckBox::indicator:indeterminate:disabled {
+	image: url('gfx:DarkenTS/gui/controls/indeterminate_checkbox_disabled.png');
 }
 
 QCheckBox::indicator:checked:disabled,
@@ -893,6 +905,10 @@ AboutQt, /* Support plugins that use AboutQt and ConfigQt to display information
 ConfigQt {
 	background-color: rgb(34,34,34);
 	/*FONTCOLOUR*//*XXX*//*NEEDS CHECKING*/
+}
+
+QDockWidget {
+	background-color: rgb(34,34,34);
 }
 
 /* https://i.sli.mg/Y84Xfa.jpg */
