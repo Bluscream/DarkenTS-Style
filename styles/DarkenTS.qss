@@ -18,6 +18,10 @@ QMainWindow {
 	background-color: rgb(46,46,46);
 }
 
+QScrollArea {
+	background-color: #333333;
+}
+
 QWidget { /* TeamSpeak's default settings */
 	font-family: "Segoe UI", Arial, sans-serif;
 	font-size: 10pt;
