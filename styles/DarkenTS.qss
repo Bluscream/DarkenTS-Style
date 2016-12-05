@@ -583,7 +583,8 @@ QGroupBox { /* Box that groups elements together (Example: Tools -> Options -> A
 	background-color: rgb(46,46,46);
 }
 
-QLineEdit { /* Anything that allows one line user input (Example: Connections -> Connect)*/
+QLineEdit,
+QPlainTextEdit { /* Anything that allows one line user input (Example: Connections -> Connect)*/
 	padding: 4px;
 	min-height: 1em;
 	border: 1px solid transparent;
@@ -592,18 +593,21 @@ QLineEdit { /* Anything that allows one line user input (Example: Connections ->
 
 QLineEdit:focus,
 QLineEdit:focus:hover,
+QPlainTextEdit:focus,
 ImprovedTextEdit:focus,
 ImprovedTextEdit:focus:hover {
 	border: 1px solid rgb(62,79,94);
 }
 
 QLineEdit:hover,
+QPlainTextEdit:hover,
 ImprovedTextEdit:hover {
 	border-color: rgb(85,85,85);
 }
 
 QTextEdit:disabled,
 QLineEdit:disabled,
+QPlainTextEdit:disabled,
 QCheckBox:disabled,
 QRadioButton:disabled {
 	color: rgb(72,72,72);
