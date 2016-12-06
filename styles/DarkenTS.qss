@@ -828,7 +828,8 @@ QListView::item:hover {
 /* -- Tables (Example: Connections -> Server List) -- */
 
 QHeaderView,
-QHeaderView::section { /* Important to avoid visual bugs which could appear for example in "List All Clients" if search yielded no results) */
+QHeaderView::section,
+QTableCornerButton::section { /* Important to avoid visual bugs which could appear for example in "List All Clients" if search yielded no results) */
 	background-color: rgb(46,46,46);
 }
 
@@ -843,10 +844,12 @@ QHeaderView::up-arrow {
 QTableView {
 	border: 1px solid rgb(29,29,29);
 	background-color: rgb(29,29,29);
-		alternate-background-color: rgb(29,29,29);
+	alternate-background-color: rgb(39,39,39);
 	outline: none;
 }
 
+
+QTableCornerButton::section,
 QTableView::item {
 	border: none; /* Important to avoid glitches in certain tables (Example: Tools -> Options -> Hotkeys) */
 	color: rgb(216,216,216); /* Important to avoid white default font colour of selected items */
