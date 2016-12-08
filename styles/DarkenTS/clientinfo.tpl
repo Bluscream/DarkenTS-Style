@@ -4,39 +4,10 @@
   Created for DarkenTS
   Licensed under CC BY-NC-SA 4.0 - https://creativecommons.org/licenses/by-nc-sa/4.0/
   By @Brady_The, modified by @Bluscream
-  Last updated: 11/21/2016
+  Last updated: 12/08/2016
 -->
 
-<style type="text/css">
-  table#info {
-    border-collapse: collapse;
-	border-spacing: 0px;
-  }
-  table#list {
-    border-collapse: collapse;
-    border-spacing: 0px;
-    margin-bottom: 10px;
-  }
-  td {
-    padding: 0px 4px 0px 1px;
-  }
-  td.label {
-    font-weight: bold;
-    white-space: nowrap;
-  }
-  td.space {
-    padding-top: 6px;
-  }
-  td.list {
-    padding: 0px 1px 0px 8px;
-  }
-  .blue {
-    color: rgb(57,165,221);
-  }
-  .red {
-    color: rgb(202,58,58);
-  }
-</style>
+<style type="text/css">@import url('styles/DarkenTS/style.css');</style>
 
 <table id="info">
   <tr>
