@@ -1,0 +1,59 @@
+/**
+  Created for DarkenTS
+  Licensed under CC BY-NC-SA 4.0 - https://creativecommons.org/licenses/by-nc-sa/4.0/
+  By @Brady_The, modified by @Bluscream, idea by @fonta
+  Last updated: 11/21/2016
+**/
+
+table#info {
+  border-collapse: collapse;
+  border-spacing: 0px;
+}
+
+table#list {
+  border-collapse: collapse;
+  border-spacing: 0px;
+  margin-bottom: 10px;
+}
+
+td {
+  padding: 0px 4px 0px 1px;
+}
+
+td.label {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+td.space {
+  padding-top: 6px;
+}
+
+td.list {
+  padding: 0px 1px 0px 8px;
+}
+
+.active {
+  color: rgb(57,165,221);
+  text-decoration: underline;
+}
+
+.inactive {
+  color: rgb(216,216,216);
+  text-decoration: underline;
+}
+
+.blue {
+  color: rgb(57,165,221);
+}
+
+.red {
+  color: rgb(202,58,58);
+}
+
+.topic {
+  text-align: center;
+  vertical-align: top;
+  font-size: 16pt;
+  font-weight: bold;
+}
